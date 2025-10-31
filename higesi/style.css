@@ -1,0 +1,262 @@
+html {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.pop {
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 1120px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* ヘッダー */
+header {
+  padding: 27px 0;
+}
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+.logo span {
+  color: #80ba4a;
+}
+.header_menu li {
+  margin-left: 40px;
+}
+.header_menu li a {
+  transition: 0.3s;
+}
+.header_menu li a:hover {
+  color: #80ba4a;
+  transition: 0.3s;
+}
+
+/* メイン */
+#hero {
+  position: relative;
+  /* ✅ 日本語ファイル名はクォーテーションで囲むと安全 */
+  background-image: url("image/がきども_0.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 540px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 90px;
+  overflow: hidden;
+}
+#hero::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+  z-index: 1;
+}
+.hero_inner {
+  z-index: 2;
+  color: #ffffff;
+  width: 100%;
+  text-align: center;
+}
+.hero_inner p {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.hero_inner h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* コンセプト */
+#concept {
+  margin-bottom: 120px;
+}
+.title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #80ba4a;
+  margin-bottom: 40px;
+}
+#concept h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+.concept-title {
+  font-weight: bold;
+}
+.column-2 {
+  width: 48%;
+}
+.text {
+  line-height: 2;
+}
+.concept-img {
+  background-image: url("image/yozayura.ss_0.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 540px;
+  border-radius: 20px;
+}
+.heading {
+  font-family: 'Dancing Script', cursive;
+  font-size: 200px;
+  font-weight: 700;
+  color: #80ba4a;
+  opacity: 0.1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* サービス */
+#service {
+  margin-bottom: 120px;
+}
+.service_inner {
+  margin-bottom: 40px;
+  position: relative;
+}
+.column-40 {
+  width: 40%;
+}
+.column-55 {
+  width: 55%;
+}
+#service img {
+  border-radius: 20px;
+  display: block;
+}
+#service h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+/* カンパニー */
+#company {
+  margin-bottom: 120px;
+}
+#company dl {
+  max-width: 900px;
+  margin-left: auto;
+}
+#company dt {
+  width: 30%;
+  padding: 48px 0;
+  border-bottom: solid 1px #d2ecba;
+}
+#company dd {
+  width: 70%;
+  padding: 48px 0;
+  border-bottom: solid 1px #d2ecba;
+}
+
+/* ボトム写真群 */
+.column-a,
+.column-b,
+.column-c,
+.column-d {
+  background-position: center;
+  background-size: cover;
+  width: 24%;
+  height: 540px;
+  border-radius: 20px;
+}
+.column-a {
+  background-image: url("image/新生児_0.jpg");
+}
+.column-b {
+  background-image: url("image/美女_0.jpg");
+}
+.column-c {
+  background-image: url("image/ボクシング_0.jpg");
+}
+.column-d {
+  background-image: url("image/スタンド_0.jpg");
+}
+
+/* フッター */
+footer {
+  text-align: center;
+  margin: 90px 0;
+}
+.copyright {
+  font-size: 12px;
+  margin-top: 40px;
+}
+
+/* ✅ スマホ対応 (レスポンシブ) */
+@media screen and (max-width: 768px) {
+  .flex {
+    flex-direction: column;
+    align-items: center;
+  }
+  .column-2,
+  .column-40,
+  .column-55,
+  .column-a,
+  .column-b,
+  .column-c,
+  .column-d {
+    width: 100%;
+    margin-bottom: 24px;
+    height: auto;
+  }
+  .concept-img,
+  #hero {
+    height: 300px;
+  }
+  .heading {
+    font-size: 80px;
+    position: static;
+    transform: none;
+    text-align: center;
+    opacity: 0.2;
+  }
+  .hero_inner h1 {
+    font-size: 24px;
+  }
+  .hero_inner p {
+    font-size: 16px;
+  }
+  .title {
+    font-size: 18px;
+  }
+  #concept h3,
+  #service h3 {
+    font-size: 20px;
+  }
+  #company dt,
+  #company dd {
+    width: 100%;
+    padding: 24px 0;
+  }
+  .header_menu {
+    flex-direction: column;
+  }
+  .header_menu li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+}
