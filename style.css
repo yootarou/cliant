@@ -47,7 +47,7 @@ header {
 #hero {
   position: relative;
   /* ✅ 日本語ファイル名はクォーテーションで囲むと安全 */
-  background-image: url("image/がきども_0.jpg");
+  background-image: url("image/gaki0.jpg");
   background-position: center;
   background-size: cover;
   height: 540px;
@@ -184,16 +184,16 @@ header {
   border-radius: 20px;
 }
 .column-a {
-  background-image: url("image/新生児_0.jpg");
+  background-image: url("image/justborn.jpg");
 }
 .column-b {
-  background-image: url("image/美女_0.jpg");
+  background-image: url("image/beautiful.jpg");
 }
 .column-c {
-  background-image: url("image/ボクシング_0.jpg");
+  background-image: url("image/boxing.jpg");
 }
 .column-d {
-  background-image: url("image/スタンド_0.jpg");
+  background-image: url("image/sutand.jpg");
 }
 
 /* フッター */
